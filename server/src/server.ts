@@ -1,12 +1,6 @@
-import express from "express";
-
-const app = express();
+import app from "./app.js";
 
 const PORT = 5000;
-
-app.get("/", (req, res) => {
-  res.send("Universal Sports Fixture Generator API is running!");
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
