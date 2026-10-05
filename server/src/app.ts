@@ -1,5 +1,6 @@
 import express from "express";
 import healthRouter from "./routes/health.routes.js";
+import tournamentRouter from "./routes/tournament.routes.js";
 
 const app = express();
 
@@ -10,5 +11,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/health", healthRouter);
+app.use("/api/tournaments", tournamentRouter);
 
 export default app;
