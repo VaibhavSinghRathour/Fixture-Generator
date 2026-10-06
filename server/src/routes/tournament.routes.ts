@@ -1,11 +1,8 @@
 import { Router } from "express";
+import { createTournament } from "../controllers/tournament.controller.js";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.json({
-    message: "Tournament route is working"
-  });
-});
+router.post("/", createTournament);
 
 export default router;
